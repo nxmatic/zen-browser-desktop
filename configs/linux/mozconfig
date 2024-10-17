@@ -7,7 +7,10 @@ else
     export CXX=clang++
 fi
 
-if test "$ZEN_RELEASE"; then
+arch=$(uname -m)
+
+if test -n "$ZEN_RELEASE"; then
+    echo "Setting release options"
 
     ac_add_options --disable-dmd
     ac_add_options --enable-linker=lld
@@ -30,28 +33,30 @@ if test "$ZEN_RELEASE"; then
     ac_add_options MOZ_PGO=1
 
     if test "$SURFER_COMPAT" = "true"; then
-        ac_add_options --enable-optimize="-O3 -march=x86-64"
+        ac_add_options --enable-optimize="-O3 -march=native"
 
-        export CFLAGS="$CFLAGS -O3 -ffp-contract=fast -march=x86-64"
-        export CPPFLAGS="$CPPFLAGS -O3 -ffp-contract=fast -march=x86-64"
-        export CXXFLAGS="$CXXFLAGS -O3 -flto=thin -ffp-contract=fast -march=x86-64"
-        export LDFLAGS="$LDFLAGS -Wl,-O3 -Wl,-mllvm,-fp-contract=fast -march=x86-64"
-        export RUSTFLAGS="$RUSTFLAGS -C target-cpu=x86-64 -C codegen-units=1 -Clink-args=--icf=safe"
+        export CFLAGS="$CFLAGS -O3 -ffp-contract=fast -march=native"
+        export CPPFLAGS="$CPPFLAGS -O3 -ffp-contract=fast -march=native"
+        export CXXFLAGS="$CXXFLAGS -O3 -flto=thin -ffp-contract=fast -march=native"
+        export LDFLAGS="$LDFLAGS -Wl,-O3 -Wl,-mllvm,-fp-contract=fast -march=native"
+        export RUSTFLAGS="$RUSTFLAGS -C target-cpu=${arch} -C codegen-units=1 -Clink-args=--icf=safe"
     else
-        ac_add_options --enable-wasm-avx
-        ac_add_options --enable-optimize="-O3 -march=x86-64-v3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpopcnt -mpclmul"
+      # ac_add_options --enable-wasm-avx
+        ac_add_options --enable-optimize="-O3 -march=native -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -maes -mpopcnt -mpclmul"
         
-        export CFLAGS="$CFLAGS -O3 -ffp-contract=fast -march=x86-64-v3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"     
-        export CPPFLAGS="$CPPFLAGS -O3 -ffp-contract=fast -march=x86-64-v3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"
-        export CXXFLAGS="$CXXFLAGS -O3 -flto=thin -ffp-contract=fast -march=x86-64-v3 -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"
-        export LDFLAGS="$LDFLAGS -Wl,-O3 -Wl,-mllvm,-fp-contract=fast -march=x86-64-v3"
-        export RUSTFLAGS="$RUSTFLAGS -C target-cpu=x86-64-v3 -C target-feature=+sse4.1 -C target-feature=+avx2 -C codegen-units=1 -Clink-args=--icf=safe"
+        export CFLAGS="$CFLAGS -O3 -ffp-contract=fast -march=native -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"     
+        export CPPFLAGS="$CPPFLAGS -O3 -ffp-contract=fast -march=native -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"
+        export CXXFLAGS="$CXXFLAGS -O3 -flto=thin -ffp-contract=fast -march=native -msse3 -mssse3 -msse4.1 -msse4.2 -mavx -mavx2 -mfma -maes -mpopcnt -mpclmul"
+        export LDFLAGS="$LDFLAGS -Wl,-O3 -Wl,-mllvm,-fp-contract=fast -march=native"
+        export RUSTFLAGS="$RUSTFLAGS -C target-cpu=native -C target-feature=+sse4.1 -C target-feature=+avx2 -C codegen-units=1 -Clink-args=--icf=safe"
     fi
     export VERBOSE=1
     export POLLY="-mllvm -polly -mllvm -polly-2nd-level-tiling -mllvm -polly-loopfusion-greedy -mllvm -polly-pattern-matching-based-opts -mllvm -polly-position=before-vectorizer -mllvm -polly-vectorizer=stripmine"
 fi
 
-ac_add_options --target=x86_64-pc-linux
+ac_add_options --target=${arch}-linux-gnu
+ac_add_options --enable-bootstrap
+#ac_add_options --target=x86_64-pc-linux
 
 ac_add_options --enable-alsa
 ac_add_options --enable-pulseaudio
