@@ -1,6 +1,13 @@
 name: Linux Release Build
 
 on:
+  workflow_dispatch:
+    inputs:
+      gha-runner-label:
+        description: 'GitHub runner label on which performing the jobs'
+        required: false
+        default: 'ubuntu-latest'
+        type: string
   workflow_call:
     inputs:
       build-version:
@@ -20,8 +27,8 @@ jobs:
   build-linux:
     permissions:
       contents: write
-    # aarch64 does not need full 16x
-    runs-on: ${{ (inputs.release-branch == 'release' && matrix.arch == 'x86_64') && 'self-hosted' || 'ubuntu-latest' }}
+    runs-on:
+      - ${{ github.event.inputs.gha-runner-label || ( github.repository_owner == github.actor && 'self-hosted' ) || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
       matrix:
