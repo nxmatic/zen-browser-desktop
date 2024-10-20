@@ -1,0 +1,77 @@
+{
+    "firefox-sources": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "firefox-sources",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-en3z+Xc3RT76okPKnbr5XQ8PgzxdyK+stXBO4W7wYNA=",
+            "type": "url",
+            "url": "https://archive.mozilla.org/pub/firefox/releases/131.0.3/source/firefox-131.0.3.source.tar.xz"
+        },
+        "version": "131.0.3"
+    },
+    "mozilla-l10n": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "mozilla-l10n",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mozilla-l10n",
+            "repo": "firefox-l10n",
+            "rev": "9d639cd79d6b73081fadb3474dd7d73b89732e7b",
+            "sha256": "sha256-+2JCaPp+c2BRM60xFCeY0pixIyo2a3rpTPaSt1kTfDw=",
+            "type": "github"
+        },
+        "version": "9d639cd79d6b73081fadb3474dd7d73b89732e7b"
+    },
+    "surfer": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "surfer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zen-browser",
+            "repo": "surfer",
+            "rev": "50af7094ede6e9f0910f010c531f8447876a6464",
+            "sha256": "sha256-wmAWg6hoICNHfoXJifYFHmyFQS6H22u3GSuRW4alexw=",
+            "type": "github"
+        },
+        "version": "50af7094ede6e9f0910f010c531f8447876a6464"
+    },
+    "zen-browser-sources": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zen-browser-sources",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": true,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zen-browser",
+            "repo": "desktop",
+            "rev": "1.0.1-a.12",
+            "sha256": "sha256-/13rgdbvLVd/MWWXOuY7H2YH7KDJczrSwI9H3kIHHM8=",
+            "type": "github"
+        },
+        "version": "1.0.1-a.12"
+    }
+}

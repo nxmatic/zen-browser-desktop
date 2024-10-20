@@ -1,0 +1,16 @@
+[surfer]
+fetch.github = "zen-browser/surfer"
+src.manual = "50af7094ede6e9f0910f010c531f8447876a6464"
+
+[zen-browser-sources]
+fetch.github = "zen-browser/desktop"
+git.fetchSubmodules = true
+src.manual = "1.0.1-a.18"
+
+[firefox-l10n]
+fetch.github = "mozilla-l10n/firefox-l10n"
+src.manual = "9d639cd79d6b73081fadb3474dd7d73b89732e7b"
+
+[firefox-sources]
+src.manual = "132.0.1"
+fetch.url = "https://archive.mozilla.org/pub/firefox/releases/$ver/source/firefox-$ver.source.tar.xz"
