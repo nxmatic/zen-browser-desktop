@@ -12,9 +12,11 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
-    flake-utils.url = "github:numtide/flake-utils";
-    nvfetcher.url = "github:berberman/nvfetcher";
+    nxmatic-flake-commons.url = "github:nxmatic/nix-flake-commons/develop";
+
+    flake-utils.follows = "nxmatic-flake-commons/flake-utils";
+    nixpkgs.follows = "nxmatic-flake-commons/nixpkgs";
+    nvfetcher.follows = "nxmatic-flake-commons/nvfetcher";
   };
 
   outputs = { self, nixpkgs, flake-utils, nvfetcher }:
@@ -26,7 +28,7 @@
         };
         nvfetcherBin = nvfetcher.packages.${system}.default;
         
-        firefoxDmg = (pkgs.callPackage ./package.nix { inherit sources; }).passthru.firefoxDmg;
+        firefoxDmg = (pkgs.callPackage ./package-unwrapped.nix { inherit sources; }).passthru.firefoxDmg;
           
         mountEngineShadow = pkgs.writeShellScriptBin "mountEngineShadow" ''
           /usr/bin/hdiutil attach "${firefoxDmg}/firefox.dmg" -quiet -noverify -mountpoint engine -readwrite -nobrowse -shadow .engine-shadow
@@ -45,7 +47,7 @@
       in
       {
         packages = {
-          default = pkgs.callPackage ./package.nix { 
+          default = pkgs.callPackage ./package-unwrapped.nix { 
             inherit sources;
           };
           
