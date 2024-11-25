@@ -1,4 +1,4 @@
-{ buildNpmPackage, buildPackages, fetchFromGitHub, fetchurl, lib, overrideCC, pkgs, sources, stdenv,
+{ buildNpmPackage, buildPackages, fetchFromGitHub, fetchurl, lib, overrideCC, pkgs, apple-sdk_15, sources, stdenv,
   # build time
   autoconf, cargo, git, gnum4, nodejs, pkg-config, pkgsBuildBuild, pkgsCross, python3, runCommand, rsync, rustc, rust-cbindgen, rustPlatform, unzip, makeWrapper,
   # runtime
@@ -40,8 +40,6 @@ let
       ln -s ${pkgs.gnutar}/bin/tar $out/bin/gtar
     '';
   };
-
-  firefoxDmg = pkgs.callPackage ./firefox-dmg.nix { inherit sources; };
 
   surfer = buildNpmPackage {
     pname = "surfer";
@@ -87,10 +85,18 @@ let
     hash = "sha256-+2JCaPp+c2BRM60xFCeY0pixIyo2a3rpTPaSt1kTfDw=";
   };
 
+  firefoxDmg = pkgs.callPackage ./firefox-dmg.nix { inherit sources; };
+
+  mountBuildZenBrowserEngineFolder = pkgs.writeShellScriptBin "mountBuildZenBrowserEngineFolder" ''
+    set -e -o pipefail
+
+    /usr/bin/hdiutil attach -quiet -noverify -mountpoint engine -readwrite -nobrowse -shadow .engine-shadow "${firefoxDmg}/firefox.dmg" 
+  '';
+
 in buildStdenv.mkDerivation (finalAttrs: {
   pname = "zen-browser-unwrapped";
-  version = sources.zen-browser-sources.version;
-  src = sources.zen-browser-sources.src;
+  version = sources.zen-browser.version;
+  src = sources.zen-browser.src;
 
 #  firefoxVersion = sources.firefox-sources.version;
 #  firefoxSrc = sources.firefox-sources.src;
@@ -98,7 +104,7 @@ in buildStdenv.mkDerivation (finalAttrs: {
   SURFER_COMPAT = generic;
 
   nativeBuildInputs = [ autoconf cargo git gnum4 llvmPackagesBuildBuild.bintools makeWrapper nasm nodejs pkg-config python3 rsync rust-cbindgen rustPlatform.bindgenHook rustc surfer unzip ]
-    ++ lib.optionals (isDarwin) [ gnutarWithSymlink ]
+    ++ lib.optionals (isDarwin) [ apple-sdk_15 gnutarWithSymlink ]
     ++ lib.optionals (!isDarwin) [ wrapGAppsHook3 ]
     ++ lib.optionals (crashreporterSupport && !isDarwin) [ dump_syms patchelf ];
 
@@ -153,10 +159,6 @@ in buildStdenv.mkDerivation (finalAttrs: {
     ];
 
   dontFixLibtool = true;
-  
-  mountEngineScript = writeShellScript "mountEngine" ''
-    hdiutil attach "${firefoxDmg}/firefox.dmg" -quiet -noverify -mountpoint engine -readwrite -nobrowse -shadow .engine-shadow
-  ''
 
   configureScript = writeShellScript "configureMozconfig" ''
     for flag in $@; do
@@ -165,6 +167,8 @@ in buildStdenv.mkDerivation (finalAttrs: {
   '';
 
   preConfigure = ''
+    set -e -o pipefail
+
     export HOME="$TMPDIR"
     git config --global user.email "nixbld@localhost"
     git config --global user.name "nixbld"
@@ -180,8 +184,7 @@ in buildStdenv.mkDerivation (finalAttrs: {
     export PATH=$PATH:/bin:/usr/bin
 
     : install firefox sources in engine
-    ${mountEngineScript}
-#   install -D dollar{finalAttrs.firefoxSrc} .surfer/engine/firefox-dollar{finalAttrs.firefoxVersion}.source.tar.xz
+    ${mountBuildZenBrowserEngineFolder}/bin/mountBuildZenBrowserEngineFolder
 
     surfer ci --brand alpha --display-version ${finalAttrs.version}
 
@@ -194,7 +197,10 @@ in buildStdenv.mkDerivation (finalAttrs: {
   '';
 
   preBuild = ''
-    cp -r ${firefox-l10n} l10n/firefox-l10n
+    set -e -o pipefail
+
+    # cp -r ${firefox-l10n} l10n/firefox-l10n
+    pwd
     for lang in $(cat ./l10n/supported-languages); do
       rsync -a "${firefox-l10n}/$lang"/ "l10n/$lang" --exclude .git
     done
@@ -230,7 +236,6 @@ in buildStdenv.mkDerivation (finalAttrs: {
   requiredSystemFeatures = [ "big-parallel" ];
 
   passthru = {
-    inherit firefoxDmg;
     inherit alsaSupport;
     inherit jackSupport;
     inherit pipewireSupport;
@@ -242,6 +247,5 @@ in buildStdenv.mkDerivation (finalAttrs: {
     inherit wasiSysRoot;
 
     binaryName = finalAttrs.meta.mainProgram;
-    firefoxDmgPath = firefoxDmg.outPath;
   };
 })

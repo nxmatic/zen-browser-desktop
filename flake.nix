@@ -1,3 +1,4 @@
+
 {
   description = "Zen Browser Flake";
 
@@ -12,14 +13,17 @@
   };
 
   inputs = {
+
     nxmatic-flake-commons.url = "github:nxmatic/nix-flake-commons/develop";
 
+    nixpkgs.url = "github:nxmatic/nixpkgs/feature/release-24.11-darwin-zen-browser";
+
     flake-utils.follows = "nxmatic-flake-commons/flake-utils";
-    nixpkgs.follows = "nxmatic-flake-commons/nixpkgs";
     nvfetcher.follows = "nxmatic-flake-commons/nvfetcher";
+
   };
 
-  outputs = { self, nixpkgs, flake-utils, nvfetcher }:
+  outputs = { self, nixpkgs, flake-utils, nvfetcher, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         overlays = [ (import ./surfer-overlay.nix) ];
@@ -27,20 +31,15 @@
           inherit system overlays;
         };
         nvfetcherBin = nvfetcher.packages.${system}.default;
-        
-        firefoxDmg = (pkgs.callPackage ./package-unwrapped.nix { inherit sources; }).passthru.firefoxDmg;
-          
-        mountEngineShadow = pkgs.writeShellScriptBin "mountEngineShadow" ''
-          /usr/bin/hdiutil attach "${firefoxDmg}/firefox.dmg" -quiet -noverify -mountpoint engine -readwrite -nobrowse -shadow .engine-shadow
-        '';
+
 
         # Function to generate sources
         generateSources = pkgs.writeShellScriptBin "generate-sources" ''
-          ${nvfetcherBin}/bin/nvfetcher -c ${./nvfetcher.toml} -o _sources 
+          ${nvfetcherBin}/bin/nvfetcher -c ${./nvfetcher.toml} -o sources
         '';
 
         # Import generated sources
-        sources = import ./_sources/generated.nix { 
+        sources = import ./sources/generated.nix {
           inherit (pkgs) fetchgit fetchurl fetchFromGitHub;
           dockerTools = pkgs.dockerTools or {};
         };
@@ -50,21 +49,10 @@
           default = pkgs.callPackage ./package-unwrapped.nix { 
             inherit sources;
           };
-          
-          mountEngineShadow = mountEngineShadow;
-          
-          updateSources = generateSources;
         };
 
         apps = {
 
-          mountEngineShadow = flake-utils.lib.mkApp {
-            drv = mountEngineShadow;
-          };
-
-          updateSources = flake-utils.lib.mkApp {
-            drv = generateSources;
-          };
         };
 
         devShell = pkgs.mkShell {

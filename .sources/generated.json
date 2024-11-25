@@ -1,0 +1,57 @@
+{
+    "firefox": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "firefox",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-XAMbVywdpyZnfi/5e2rVp+OyM4em/DljORy1YvgKXkg=",
+            "type": "url",
+            "url": "https://archive.mozilla.org/pub/firefox/releases/132.0.1/source/firefox-132.0.1.source.tar.xz"
+        },
+        "version": "132.0.1"
+    },
+    "socket-vmnet-sources": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "socket-vmnet-sources",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lima-vm",
+            "repo": "socket_vmnet",
+            "rev": "v1.1.7",
+            "sha256": "sha256-SABFfeMhabz1MIBCyzV6kErR0xdtP4fX1zQOagO7lVA=",
+            "type": "github"
+        },
+        "version": "v1.1.7"
+    },
+    "zen-browser": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "zen-browser",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zen-browser",
+            "repo": "desktop",
+            "rev": "1.0.1-a.19",
+            "sha256": "sha256-y8B7i69pr2571iAhvdCTMOwBKPNrzwT9iYwoyI2Vgak=",
+            "type": "github"
+        },
+        "version": "1.0.1-a.19"
+    }
+}

@@ -1,8 +1,8 @@
 { stdenv, lib, coreutils, gnutar, darwin, sources }:
 
 stdenv.mkDerivation {
-  name = "firefox-${sources.firefox-sources.version}-dmg";
-  src = sources.firefox-sources.src;
+  name = "firefox-${sources.firefox.version}-dmg";
+  src = sources.firefox.src;
 
   nativeBuildInputs = [ 
     coreutils
