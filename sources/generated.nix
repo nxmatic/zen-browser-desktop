@@ -3,21 +3,21 @@
 {
   firefox = {
     pname = "firefox";
-    version = "132.0.1";
+    version = "136.0.1";
     src = fetchurl {
-      url = "https://archive.mozilla.org/pub/firefox/releases/132.0.1/source/firefox-132.0.1.source.tar.xz";
-      sha256 = "sha256-XAMbVywdpyZnfi/5e2rVp+OyM4em/DljORy1YvgKXkg=";
+      url = "https://archive.mozilla.org/pub/firefox/releases/136.0.1/source/firefox-136.0.1.source.tar.xz";
+      sha256 = "sha256-TxK9z6pycffysYq403ensivpXqAfEeGOHr93lT4yIbY=";
     };
   };
   zen-browser = {
     pname = "zen-browser";
-    version = "1.0.1-a.19";
+    version = "1.9.1b";
     src = fetchFromGitHub {
       owner = "zen-browser";
       repo = "desktop";
-      rev = "1.0.1-a.19";
+      rev = "1.9.1b";
       fetchSubmodules = true;
-      sha256 = "sha256-+eehLsnQoWapkSKo3zWFxaz6N68BryK1XsmSk48zbbk=";
+      sha256 = "sha256-fg6HD85iZOU2o1F27kWONIKtrArG1HqYAGk4qldYBp4=";
     };
   };
 }

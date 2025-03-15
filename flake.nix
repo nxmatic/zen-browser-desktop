@@ -1,4 +1,3 @@
-
 {
   description = "Zen Browser Flake";
 
@@ -16,9 +15,10 @@
 
     nxmatic-flake-commons.url = "github:nxmatic/nix-flake-commons/develop";
 
-    nixpkgs.url = "github:nxmatic/nixpkgs/feature/release-24.11-darwin-zen-browser";
+    nixpkgs.follows = "nxmatic-flake-commons/nixpkgs";
 
     flake-utils.follows = "nxmatic-flake-commons/flake-utils";
+
     nvfetcher.follows = "nxmatic-flake-commons/nvfetcher";
 
   };

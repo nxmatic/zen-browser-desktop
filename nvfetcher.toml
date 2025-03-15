@@ -1,8 +1,8 @@
 [firefox]
-src.manual = "132.0.1"
+src.manual = "136.0.1"
 fetch.url = "https://archive.mozilla.org/pub/firefox/releases/$ver/source/firefox-$ver.source.tar.xz"
 [zen-browser]
 fetch.github = "zen-browser/desktop"
-src.manual = "1.0.1-a.19"
+src.manual = "1.9.1b"
 git.fetchSubmodules = true
 

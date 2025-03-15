@@ -8,11 +8,11 @@
         "pinned": false,
         "src": {
             "name": null,
-            "sha256": "sha256-XAMbVywdpyZnfi/5e2rVp+OyM4em/DljORy1YvgKXkg=",
+            "sha256": "sha256-TxK9z6pycffysYq403ensivpXqAfEeGOHr93lT4yIbY=",
             "type": "url",
-            "url": "https://archive.mozilla.org/pub/firefox/releases/132.0.1/source/firefox-132.0.1.source.tar.xz"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/136.0.1/source/firefox-136.0.1.source.tar.xz"
         },
-        "version": "132.0.1"
+        "version": "136.0.1"
     },
     "zen-browser": {
         "cargoLocks": null,
@@ -28,10 +28,10 @@
             "name": null,
             "owner": "zen-browser",
             "repo": "desktop",
-            "rev": "1.0.1-a.19",
-            "sha256": "sha256-+eehLsnQoWapkSKo3zWFxaz6N68BryK1XsmSk48zbbk=",
+            "rev": "1.9.1b",
+            "sha256": "sha256-fg6HD85iZOU2o1F27kWONIKtrArG1HqYAGk4qldYBp4=",
             "type": "github"
         },
-        "version": "1.0.1-a.19"
+        "version": "1.9.1b"
     }
 }
