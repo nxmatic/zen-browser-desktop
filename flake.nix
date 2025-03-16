@@ -2,13 +2,10 @@
   description = "Zen Browser Flake";
 
   nixConfig = {
-    substituters = [
-      "https://cache.nixos.org"
-    ];
+    substituters = [ "https://cache.nixos.org" ];
 
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-    ];
+    trusted-public-keys =
+      [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
   };
 
   inputs = {
@@ -26,12 +23,8 @@
   outputs = { self, nixpkgs, flake-utils, nvfetcher, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        overlays = [ (import ./surfer-overlay.nix) ];
-        pkgs = import nixpkgs {
-          inherit system overlays;
-        };
+        pkgs = import nixpkgs { inherit system ; };
         nvfetcherBin = nvfetcher.packages.${system}.default;
-
 
         # Function to generate sources
         generateSources = pkgs.writeShellScriptBin "generate-sources" ''
@@ -41,14 +34,15 @@
         # Import generated sources
         sources = import ./sources/generated.nix {
           inherit (pkgs) fetchgit fetchurl fetchFromGitHub;
-          dockerTools = pkgs.dockerTools or {};
+          dockerTools = pkgs.dockerTools or { };
         };
-      in
-      {
+
+        zenBrowser = pkgs.callPackage ./package-unwrapped.nix {
+          inherit pkgs sources;
+        };
+      in {
         packages = {
-          default = pkgs.callPackage ./package-unwrapped.nix { 
-            inherit sources;
-          };
+          default = zenBrowser;
         };
 
         apps = {
@@ -56,22 +50,14 @@
         };
 
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            nodejs
-            pnpm
-            python311
-            git
-            pkg-config
-          ];
-
+          buildInputs = zenBrowser.nativeBuildInputs;
+  
           shellHook = ''
             echo "Welcome to Zen Browser development environment!"
             echo "Use 'surfer' commands to interact with the build process."
           '';
         };
-      }
-    ) // {
-      nixosModule = import ./module.nix;
-      darwinModule = import ./module.nix;
-    };
+      }) // {
+        darwinModule = import ./module.nix;
+      };
 }

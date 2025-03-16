@@ -3,8 +3,17 @@
   "manifest": {
     "version": 1,
     "install": {
+      "ccache": {
+        "pkg-path": "ccache"
+      },
+      "icu": {
+        "pkg-path": "icu"
+      },
       "nvfetcher": {
         "pkg-path": "nvfetcher"
+      },
+      "sccache": {
+        "pkg-path": "sccache"
       }
     },
     "hook": {},
@@ -24,20 +33,286 @@
   },
   "packages": [
     {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/5azs705h8khndz8n9y10d4rrdxq67fy2-ccache-4.10.2.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "ccache-4.10.2",
+      "pname": "ccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/s2sg463kgrzvi4fjglhq5n3wq4vfilqz-ccache-4.10.2-man",
+        "out": "/nix/store/p8cilljwp2ikc20zbp565za2154mq9nz-ccache-4.10.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/x3123ybhbvcjy94xzqy1a2sjgiimzxgr-ccache-4.10.2.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "ccache-4.10.2",
+      "pname": "ccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/4swslg7fw8a90a833yq8ifva1jv57fd7-ccache-4.10.2-man",
+        "out": "/nix/store/03sbr5y46cg0fa6hq8dry3n6v8wl0b3q-ccache-4.10.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/bc1kq4flwbbg7kswjgdr1z3xpw4vzxg8-ccache-4.10.2.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "ccache-4.10.2",
+      "pname": "ccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/l0ypx5iz7jil2x67qacsrdjmzl65x67d-ccache-4.10.2-man",
+        "out": "/nix/store/j27kd6cjm2g1c7bz158rd0pf5q1bs5ps-ccache-4.10.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/jb9pmn08165xcq853x93j0dvw42rk7wj-ccache-4.10.2.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "ccache-4.10.2",
+      "pname": "ccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.10.2",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/vygiix7a11h7yr761lxn7k94xv1jpww4-ccache-4.10.2-man",
+        "out": "/nix/store/k7s7x0vfjiadddjj77zq8cik7pd29k93-ccache-4.10.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "icu",
+      "broken": false,
+      "derivation": "/nix/store/acy6yhbhnqjalffa3frv5svz06f3rqv6-icu4c-74.2.drv",
+      "description": "Unicode and globalization support library",
+      "install_id": "icu",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "icu4c-74.2",
+      "pname": "icu",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "74.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/6zmdhpn7ls3jvn1hqib2cc6rx3sjhy3b-icu4c-74.2-dev",
+        "out": "/nix/store/7r229x8mkl1smb4vgcil1qbfrhnlnj6y-icu4c-74.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "icu",
+      "broken": false,
+      "derivation": "/nix/store/akdkgds1krrcialbg7xzkbwp6f5b4drw-icu4c-74.2.drv",
+      "description": "Unicode and globalization support library",
+      "install_id": "icu",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "icu4c-74.2",
+      "pname": "icu",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "74.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/nnq7mzaxpiz6qkyhvrihx8rd6w85n2yl-icu4c-74.2-dev",
+        "out": "/nix/store/dckd8l3q64vkxqmsvfr1fvww0pjminh8-icu4c-74.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "icu",
+      "broken": false,
+      "derivation": "/nix/store/hks9k72pdzf34csbp69xr2d05pngr9j6-icu4c-74.2.drv",
+      "description": "Unicode and globalization support library",
+      "install_id": "icu",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "icu4c-74.2",
+      "pname": "icu",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "74.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/hjqpyyhn7ba2fjaq7fh3zv1b1jnqn217-icu4c-74.2-dev",
+        "out": "/nix/store/f30823spx2hxdjcr88nfsjaxa7ls304y-icu4c-74.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "icu",
+      "broken": false,
+      "derivation": "/nix/store/fav7pmpj7iw8m9g4cry63r49v1vrjniz-icu4c-74.2.drv",
+      "description": "Unicode and globalization support library",
+      "install_id": "icu",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "icu4c-74.2",
+      "pname": "icu",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "74.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/2c2x8ykbhnb36dqmiia2024fixfy2s24-icu4c-74.2-dev",
+        "out": "/nix/store/92l2hl30683sbnkkzp55jpmnpa58mr2c-icu4c-74.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
       "attr_path": "nvfetcher",
       "broken": false,
       "derivation": "/nix/store/w4q292ds76xgpwi5w1a1i5yhjpddsg7h-nvfetcher-0.6.2.0.drv",
       "description": "Generate nix sources expr for the latest version of packages",
       "install_id": "nvfetcher",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=23e89b7da85c3640bbc2173fe04f4bd114342367",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
       "name": "nvfetcher-0.6.2.0",
       "pname": "nvfetcher",
-      "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
-      "rev_count": 710087,
-      "rev_date": "2024-11-19T11:04:08Z",
-      "scrape_date": "2024-11-21T04:00:36Z",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
       "stabilities": [
+        "lts",
+        "stable",
         "staging",
         "unstable"
       ],
@@ -60,14 +335,16 @@
       "description": "Generate nix sources expr for the latest version of packages",
       "install_id": "nvfetcher",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=23e89b7da85c3640bbc2173fe04f4bd114342367",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
       "name": "nvfetcher-0.6.2.0",
       "pname": "nvfetcher",
-      "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
-      "rev_count": 710087,
-      "rev_date": "2024-11-19T11:04:08Z",
-      "scrape_date": "2024-11-21T04:00:36Z",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
       "stabilities": [
+        "lts",
+        "stable",
         "staging",
         "unstable"
       ],
@@ -90,14 +367,16 @@
       "description": "Generate nix sources expr for the latest version of packages",
       "install_id": "nvfetcher",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=23e89b7da85c3640bbc2173fe04f4bd114342367",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
       "name": "nvfetcher-0.6.2.0",
       "pname": "nvfetcher",
-      "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
-      "rev_count": 710087,
-      "rev_date": "2024-11-19T11:04:08Z",
-      "scrape_date": "2024-11-21T04:00:36Z",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
       "stabilities": [
+        "lts",
+        "stable",
         "staging",
         "unstable"
       ],
@@ -120,14 +399,16 @@
       "description": "Generate nix sources expr for the latest version of packages",
       "install_id": "nvfetcher",
       "license": "MIT",
-      "locked_url": "https://github.com/flox/nixpkgs?rev=23e89b7da85c3640bbc2173fe04f4bd114342367",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
       "name": "nvfetcher-0.6.2.0",
       "pname": "nvfetcher",
-      "rev": "23e89b7da85c3640bbc2173fe04f4bd114342367",
-      "rev_count": 710087,
-      "rev_date": "2024-11-19T11:04:08Z",
-      "scrape_date": "2024-11-21T04:00:36Z",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
       "stabilities": [
+        "lts",
+        "stable",
         "staging",
         "unstable"
       ],
@@ -138,6 +419,134 @@
       ],
       "outputs": {
         "out": "/nix/store/53np7s5hlwah4kfbqs996s4pb4sla8hl-nvfetcher-0.6.2.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/kw296avi0mzafb8l24gwdzyrrr12c3j6-sccache-0.8.2.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "sccache-0.8.2",
+      "pname": "sccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.8.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/hqd9v35mvvpig8siq5bfdiqklbdvls2h-sccache-0.8.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/vfpnj77dmg0y2v27ryknx1fnigmgdmbx-sccache-0.8.2.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "sccache-0.8.2",
+      "pname": "sccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.8.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/dfc5i93dp394mjf2w1qf3vffwv2wwck5-sccache-0.8.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/w9s3yvdqaxfzi05x6ljda62j4qifh2cw-sccache-0.8.2.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "sccache-0.8.2",
+      "pname": "sccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.8.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zcrs33i0pl2lhbbvkc5p2y23r4g0ivzp-sccache-0.8.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/h93yfhi77j0kcp9k984qw8khjmv30jiz-sccache-0.8.2.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "name": "sccache-0.8.2",
+      "pname": "sccache",
+      "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
+      "rev_count": 712559,
+      "rev_date": "2024-11-25T07:53:41Z",
+      "scrape_date": "2024-11-27T03:52:37Z",
+      "stabilities": [
+        "lts",
+        "stable",
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.8.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cnx03i612w9slbscm0fplnismcz6dr7r-sccache-0.8.2"
       },
       "system": "x86_64-linux",
       "group": "toplevel",

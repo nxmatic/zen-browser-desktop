@@ -10,6 +10,9 @@ version = 1
 # the `[install]` section.
 [install]
 nvfetcher.pkg-path = "nvfetcher"
+icu.pkg-path = "icu"
+ccache.pkg-path = "ccache"
+sccache.pkg-path = "sccache"
 # hello.pkg-path = "hello"
 # nodejs = { version = "^20.15.1", pkg-path = "nodejs" }
 

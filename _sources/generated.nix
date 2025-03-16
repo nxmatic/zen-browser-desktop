@@ -9,6 +9,19 @@
       sha256 = "sha256-Uxh8noRUP3eDblV8Kin5UjixEed5FUIX3y7ZtQ3b8gA=";
     };
   };
+  firefox-l10n = {
+    pname = "firefox-l10n";
+    version = "last-sync";
+    src = fetchFromGitHub {
+      owner = "mozilla-l10n";
+      repo = "firefox-l10n";
+      rev = "last-sync";
+      fetchSubmodules = false;
+      deepClone = false;
+      leaveDotGit = true;
+      sha256 = "sha256-DOAm6SY0VI3okOLmpgDNb58NKFUuSln9p3fM2AhaQOo=";
+    };
+  };
   zen-browser = {
     pname = "zen-browser";
     version = "1.9.1b";

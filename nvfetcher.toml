@@ -1,6 +1,10 @@
 [firefox]
-src.manual = "136.0.1"
+src.manual = "136.0.2"
 fetch.url = "https://archive.mozilla.org/pub/firefox/releases/$ver/source/firefox-$ver.source.tar.xz"
+[firefox-l10n]
+fetch.github = "mozilla-l10n/firefox-l10n"
+src.manual = "last-sync"
+git.leaveDotGit = true
 [zen-browser]
 fetch.github = "zen-browser/desktop"
 src.manual = "1.9.1b"
