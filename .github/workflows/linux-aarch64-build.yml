@@ -11,6 +11,14 @@ on:
         description: 'The brand to build'
         default: ""
         type: string
+      release-branch:
+        description: 'The release branch to build'
+        default: "alpha"
+        type: string
+      build-version:
+        description: 'The version to build'
+        default: "0.0.0-dev"
+        type: string
       display-version:
         description: 'The display version to build'
         default: "0.0.0-dev"
@@ -48,36 +56,17 @@ jobs:
           # if set to "true" but frees about 6 GB
           tool-cache: false
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-         node-version: 20
-
       - uses: actions/checkout@v4
         with:
           submodules: recursive
 
+      - name: Setup development environment
+        uses: ./.github/actions/flox/action.yml
+                    
       - name: Setup git
         run: |
           git config --global user.email "mauro-balades@users.noreply.github.com"
           git config --global user.name "mauro-balades"
-
-      - name: Install system dependencies
-        run: |
-          curl -o /dev/stdout https://apt.llvm.org/llvm.sh | 
-            sudo bash
-          sudo apt-get -y update --fix-missing
-          sudo apt-get -y update
-          sudo apt-get -y install dos2unix yasm build-essential libgtk2.0-dev libpython3-dev m4 uuid libasound2-dev libcurl4-openssl-dev libdbus-1-dev libdrm-dev libdbus-glib-1-dev libdbus-glib-1-dev libgtk-3-dev libpulse-dev libx11-xcb-dev libxt-dev xvfb pkgconf pkgconf-bin clang llvm libclang-dev libclang-cpp-dev libclang-rt-18-dev-wasm32
-
-      - name: Setup cargo
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
-          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
-
-      - name: Install additional rust applications
-        run: |
-          cargo install --force cbindgen
           
       - name: Configure sccache
         uses: actions/github-script@v7
@@ -86,26 +75,12 @@ jobs:
             core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
             core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
 
-      - name: Install sccache
-        env:
-          LINK: https://github.com/mozilla/sccache/releases/download
-          SCCACHE_VERSION: 0.2.13
-        run: |
-          SCCACHE_FILE=sccache-$SCCACHE_VERSION-x86_64-unknown-linux-musl
-          mkdir -p $HOME/.local/bin
-          curl -L "$LINK/$SCCACHE_VERSION/$SCCACHE_FILE.tar.gz" | tar xz
-          mv -f $SCCACHE_FILE/sccache $HOME/.local/bin/sccache
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-
       - name: Save sccache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         continue-on-error: false
         with:
           path: /home/runner/.cache/sccache
           key: ${{ runner.os }}-sccache
-
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Get pnpm store directory
         id: pnpm-cache
@@ -171,14 +146,14 @@ jobs:
           name: linux_update_manifest_aarch64
           path: ./dist/update
 
-      - name: release-github
-        uses: 'marvinpinto/action-automatic-releases@latest'
-        if: ${{ inputs.brand == 'alpha' }}
-        with:
-          prerelease: true
-          title: 'Alpha build - ${{ needs.build-data.outputs.version }} (${{ needs.build-data.outputs.build_date }})'
-          files: |
-            zen.source.tar.gz
-            zen.linux-aarch64.tar.bz2
-            linux.mar
-            linux-generic.mar
+      # - name: release-github
+      #   uses: 'marvinpinto/action-automatic-releases@latest'
+      #   if: ${{ inputs.brand == 'alpha' }}
+      #   with:
+      #     prerelease: true
+      #     title: 'Alpha build - ${{ needs.build-data.outputs.version }} (${{ needs.build-data.outputs.build_date }})'
+      #     files: |
+      #       zen.source.tar.gz
+      #       zen.linux-aarch64.tar.bz2
+      #       linux.mar
+      #       linux-generic.mar

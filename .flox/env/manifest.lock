@@ -1,0 +1,2900 @@
+{
+  "lockfile-version": 1,
+  "manifest": {
+    "version": 1,
+    "install": {
+      "actionlint": {
+        "pkg-path": "actionlint"
+      },
+      "bolt": {
+        "pkg-path": "bolt",
+        "systems": [
+          "aarch64-linux",
+          "x86_64-linux"
+        ]
+      },
+      "cairo": {
+        "pkg-path": "cairo"
+      },
+      "cargo": {
+        "pkg-path": "cargo"
+      },
+      "cargo-wasi": {
+        "pkg-path": "cargo-wasi"
+      },
+      "ccache": {
+        "pkg-path": "ccache"
+      },
+      "clang-unwrapped": {
+        "pkg-path": "llvmPackages.clang-unwrapped"
+      },
+      "gnutar": {
+        "pkg-path": "gnutar"
+      },
+      "libclang": {
+        "pkg-path": "llvmPackages.libclang"
+      },
+      "lld": {
+        "pkg-path": "lld"
+      },
+      "llvm": {
+        "pkg-path": "llvm"
+      },
+      "m4": {
+        "pkg-path": "m4"
+      },
+      "mercurial": {
+        "pkg-path": "mercurial"
+      },
+      "nodejs_20": {
+        "pkg-path": "nodejs_20"
+      },
+      "pkgconf": {
+        "pkg-path": "pkgconf"
+      },
+      "pnpm": {
+        "pkg-path": "pnpm"
+      },
+      "python311": {
+        "pkg-path": "python311",
+        "pkg-group": "python311"
+      },
+      "rust-bindgen": {
+        "pkg-path": "rust-bindgen"
+      },
+      "rust-cbindgen": {
+        "pkg-path": "rust-cbindgen"
+      },
+      "rustfmt": {
+        "pkg-path": "rustfmt"
+      },
+      "sccache": {
+        "pkg-path": "sccache"
+      },
+      "xz": {
+        "pkg-path": "xz"
+      },
+      "yasm": {
+        "pkg-path": "yasm"
+      }
+    },
+    "hook": {
+      "on-activate": "  : Ensure gtar is available and points to tar in .flox/run/bin\n  if ! command -v gtar &> /dev/null; then\n    ln -s \"$(command -v tar)\" \"$FLOX_ENV/bin/gtar\"\n  fi\n"
+    },
+    "profile": {},
+    "options": {
+      "systems": [
+        "aarch64-darwin",
+        "aarch64-linux",
+        "x86_64-darwin",
+        "x86_64-linux"
+      ],
+      "allow": {
+        "licenses": []
+      },
+      "semver": {}
+    }
+  },
+  "packages": [
+    {
+      "attr_path": "python311",
+      "broken": false,
+      "derivation": "/nix/store/m0bhpxxfa41pad2n1xx9xjz9jibn64w1-python3-3.11.11.drv",
+      "description": "High-level dynamically-typed programming language",
+      "install_id": "python311",
+      "license": "Python-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "name": "python3-3.11.11",
+      "pname": "python311",
+      "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "rev_count": 768633,
+      "rev_date": "2025-03-15T20:13:08Z",
+      "scrape_date": "2025-03-17T00:32:15Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3-3.11.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/h7hmj8v6rgddxknk3cyxw0wl2lzwh9wl-python3-3.11.11"
+      },
+      "system": "aarch64-darwin",
+      "group": "python311",
+      "priority": 5
+    },
+    {
+      "attr_path": "python311",
+      "broken": false,
+      "derivation": "/nix/store/296slyxbb0z4fb0wa971289kwryrcq7q-python3-3.11.11.drv",
+      "description": "High-level dynamically-typed programming language",
+      "install_id": "python311",
+      "license": "Python-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "name": "python3-3.11.11",
+      "pname": "python311",
+      "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "rev_count": 768633,
+      "rev_date": "2025-03-15T20:13:08Z",
+      "scrape_date": "2025-03-17T00:32:15Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3-3.11.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/4smb0bxpqm2rrvrk54v1kjbhwqsazahj-python3-3.11.11-debug",
+        "out": "/nix/store/05nd7sn8k3pif1358z6vpd0bdi5hs77f-python3-3.11.11"
+      },
+      "system": "aarch64-linux",
+      "group": "python311",
+      "priority": 5
+    },
+    {
+      "attr_path": "python311",
+      "broken": false,
+      "derivation": "/nix/store/sfjy0zx7m7xqmc67f4cmxjy24m8769ca-python3-3.11.11.drv",
+      "description": "High-level dynamically-typed programming language",
+      "install_id": "python311",
+      "license": "Python-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "name": "python3-3.11.11",
+      "pname": "python311",
+      "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "rev_count": 768633,
+      "rev_date": "2025-03-15T20:13:08Z",
+      "scrape_date": "2025-03-17T00:32:15Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3-3.11.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/0hmd8kbc0a4j62kzrf9p0w858ghsi7a9-python3-3.11.11"
+      },
+      "system": "x86_64-darwin",
+      "group": "python311",
+      "priority": 5
+    },
+    {
+      "attr_path": "python311",
+      "broken": false,
+      "derivation": "/nix/store/pmasm9h9lpy6d8z61ahiz2c45bggcpha-python3-3.11.11.drv",
+      "description": "High-level dynamically-typed programming language",
+      "install_id": "python311",
+      "license": "Python-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "name": "python3-3.11.11",
+      "pname": "python311",
+      "rev": "c80f6a7e10b39afcc1894e02ef785b1ad0b0d7e5",
+      "rev_count": 768633,
+      "rev_date": "2025-03-15T20:13:08Z",
+      "scrape_date": "2025-03-17T00:32:15Z",
+      "stabilities": [
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "python3-3.11.11",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/z2bg61f6r097idpj16iz29jllns6xlky-python3-3.11.11-debug",
+        "out": "/nix/store/89h7ppmyqv2fjq3apz7hv8323v9n4w3g-python3-3.11.11"
+      },
+      "system": "x86_64-linux",
+      "group": "python311",
+      "priority": 5
+    },
+    {
+      "attr_path": "actionlint",
+      "broken": false,
+      "derivation": "/nix/store/cia64kjsy814drs8ddhldd7ls7jxgiwa-actionlint-1.7.7.drv",
+      "description": "Static checker for GitHub Actions workflow files",
+      "install_id": "actionlint",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "actionlint-1.7.7",
+      "pname": "actionlint",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/b2pq4pslaq97zanpm7qd02asjg81aixm-actionlint-1.7.7"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "actionlint",
+      "broken": false,
+      "derivation": "/nix/store/gw1djsznwvq4n93nm98y2xdfr9v4dls8-actionlint-1.7.7.drv",
+      "description": "Static checker for GitHub Actions workflow files",
+      "install_id": "actionlint",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "actionlint-1.7.7",
+      "pname": "actionlint",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/1gmm4ma7yjkk5mf51w4r4bd8bcaq5ymd-actionlint-1.7.7"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "actionlint",
+      "broken": false,
+      "derivation": "/nix/store/1ing1vyq8cf8cn78p8rzmpzlxwy83b1r-actionlint-1.7.7.drv",
+      "description": "Static checker for GitHub Actions workflow files",
+      "install_id": "actionlint",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "actionlint-1.7.7",
+      "pname": "actionlint",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/zpqx1c6ln8d9w79ikq6hc46kwbjh7cjc-actionlint-1.7.7"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "actionlint",
+      "broken": false,
+      "derivation": "/nix/store/8i9l3d03iq5snk49x9aargl77xcbk4qs-actionlint-1.7.7.drv",
+      "description": "Static checker for GitHub Actions workflow files",
+      "install_id": "actionlint",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "actionlint-1.7.7",
+      "pname": "actionlint",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.7.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/23mjris1i35qq1p1mb1im46yxqxzg1ng-actionlint-1.7.7"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "bolt",
+      "broken": false,
+      "derivation": "/nix/store/x839zrv4fcsaqhdpa0lwnffkwcshqqfs-bolt-0.9.8.drv",
+      "description": "Thunderbolt 3 device management daemon",
+      "install_id": "bolt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "bolt-0.9.8",
+      "pname": "bolt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.9.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/ka5nwr39iwv85d46m5pqwk5acmqcf57k-bolt-0.9.8"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "bolt",
+      "broken": false,
+      "derivation": "/nix/store/6a1c3y035jn8lpmpyfzm7d6xyryxbjjj-bolt-0.9.8.drv",
+      "description": "Thunderbolt 3 device management daemon",
+      "install_id": "bolt",
+      "license": "LGPL-2.1-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "bolt-0.9.8",
+      "pname": "bolt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.9.8",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/vqa61n34972jyn9dfqnin2j209nzbvwr-bolt-0.9.8"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cairo",
+      "broken": false,
+      "derivation": "/nix/store/61fi9cmsjqk6df7slqfslph66d8kmbla-cairo-1.18.2.drv",
+      "description": "2D graphics library with support for multiple output devices",
+      "install_id": "cairo",
+      "license": "[ LGPL-2.0-or-later, MPL-1.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cairo-1.18.2",
+      "pname": "cairo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/0767181y0nybimz40jla39gigv2bz9mh-cairo-1.18.2-dev",
+        "devdoc": "/nix/store/5bdzag2dbhvjaacdfb358jgvicpsxsmy-cairo-1.18.2-devdoc",
+        "out": "/nix/store/b6iabhihsy5yv4zijfaf5a9qzfmcfniq-cairo-1.18.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cairo",
+      "broken": false,
+      "derivation": "/nix/store/jdms93iqrycr0sma6ln1j8m2gx8zj3v4-cairo-1.18.2.drv",
+      "description": "2D graphics library with support for multiple output devices",
+      "install_id": "cairo",
+      "license": "[ LGPL-2.0-or-later, MPL-1.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cairo-1.18.2",
+      "pname": "cairo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/xmcfm7wi7hbrx9d9a2fia633q019xjzp-cairo-1.18.2-debug",
+        "dev": "/nix/store/fbjfh4wdhfrv9k4jxvf7q99akph6lv3r-cairo-1.18.2-dev",
+        "devdoc": "/nix/store/sn4734d1zh76nxqfzwp3zvrcybml05si-cairo-1.18.2-devdoc",
+        "out": "/nix/store/rkfyqp1jlhs7k9n8lgmfqpvw2fdwlwz0-cairo-1.18.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cairo",
+      "broken": false,
+      "derivation": "/nix/store/fidhsqnk7aqp72crxamjx4yp4xqf9nzg-cairo-1.18.2.drv",
+      "description": "2D graphics library with support for multiple output devices",
+      "install_id": "cairo",
+      "license": "[ LGPL-2.0-or-later, MPL-1.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cairo-1.18.2",
+      "pname": "cairo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/qdb0m304pdihhjkcqrgysyfrni87mpjq-cairo-1.18.2-dev",
+        "devdoc": "/nix/store/pxmmg2cwf2ljwm9xgbznpws7klzdzzqh-cairo-1.18.2-devdoc",
+        "out": "/nix/store/6vm29nm0wlj588j58bqnph8k9508m3x3-cairo-1.18.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cairo",
+      "broken": false,
+      "derivation": "/nix/store/87ja43j71x6xz6iw3wksh0lg011mfq3s-cairo-1.18.2.drv",
+      "description": "2D graphics library with support for multiple output devices",
+      "install_id": "cairo",
+      "license": "[ LGPL-2.0-or-later, MPL-1.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cairo-1.18.2",
+      "pname": "cairo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.18.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "debug": "/nix/store/nc8g7pqxs9nwyg2ql0l92j00xwznam80-cairo-1.18.2-debug",
+        "dev": "/nix/store/hnqd8hy29lms41fy7r8ccyhq0xahlfgf-cairo-1.18.2-dev",
+        "devdoc": "/nix/store/xg6fbyjjqvnwxxkyhigi8k8n9691qwld-cairo-1.18.2-devdoc",
+        "out": "/nix/store/0713644mps95ixcbbpip5kbvyzaad8r0-cairo-1.18.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo",
+      "broken": false,
+      "derivation": "/nix/store/zwzhcrg3d42aw4sxkfs3ygr2i44nql71-cargo-1.85.0.drv",
+      "description": "Downloads your Rust project's dependencies and builds your project",
+      "install_id": "cargo",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-1.85.0",
+      "pname": "cargo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cmiczpf80qdp9vnbckpk6cp8yclbni6y-cargo-1.85.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo",
+      "broken": false,
+      "derivation": "/nix/store/2b7z02jiy3ndd56iqpzxkrkdwz5c5nap-cargo-1.85.0.drv",
+      "description": "Downloads your Rust project's dependencies and builds your project",
+      "install_id": "cargo",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-1.85.0",
+      "pname": "cargo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/qzkb9zmyccr38rdv8glk6i9l2wc761cw-cargo-1.85.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo",
+      "broken": false,
+      "derivation": "/nix/store/iw4qb90wqkizy2axk8caad7afqhvknrd-cargo-1.85.0.drv",
+      "description": "Downloads your Rust project's dependencies and builds your project",
+      "install_id": "cargo",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-1.85.0",
+      "pname": "cargo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/nlv4aicads6f0alzkb2kjiqwc6ljzjnf-cargo-1.85.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo",
+      "broken": false,
+      "derivation": "/nix/store/0nvv3swfyq2d5h7knxsyj8bc3nzlywm2-cargo-1.85.0.drv",
+      "description": "Downloads your Rust project's dependencies and builds your project",
+      "install_id": "cargo",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-1.85.0",
+      "pname": "cargo",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/wvcl683adl5vsc2873rdcs255zq3j7yk-cargo-1.85.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo-wasi",
+      "broken": false,
+      "derivation": "/nix/store/zs36w3zxnxxn881sk922z2vv94b492g8-cargo-wasi-0.1.28.drv",
+      "description": "Lightweight Cargo subcommand to build code for the wasm32-wasi target",
+      "install_id": "cargo-wasi",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-wasi-0.1.28",
+      "pname": "cargo-wasi",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.1.28",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/0g32xp85msp9vmv16lllq745kg0lymkz-cargo-wasi-0.1.28"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo-wasi",
+      "broken": false,
+      "derivation": "/nix/store/x79iybyhxdmriv4115a3dh966h1fdml8-cargo-wasi-0.1.28.drv",
+      "description": "Lightweight Cargo subcommand to build code for the wasm32-wasi target",
+      "install_id": "cargo-wasi",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-wasi-0.1.28",
+      "pname": "cargo-wasi",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.1.28",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8yg6r3hg0kxc4y4lb5vgchkln6y6mnk5-cargo-wasi-0.1.28"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo-wasi",
+      "broken": false,
+      "derivation": "/nix/store/7r06ff4rywqbygigcx9vzyz6vm0iq0r2-cargo-wasi-0.1.28.drv",
+      "description": "Lightweight Cargo subcommand to build code for the wasm32-wasi target",
+      "install_id": "cargo-wasi",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-wasi-0.1.28",
+      "pname": "cargo-wasi",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.1.28",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/3f2i49y4g4fd0qb6vw1qjadaxnax74a1-cargo-wasi-0.1.28"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "cargo-wasi",
+      "broken": false,
+      "derivation": "/nix/store/87909yk27kmdimbhlm0vvhxqj7is026b-cargo-wasi-0.1.28.drv",
+      "description": "Lightweight Cargo subcommand to build code for the wasm32-wasi target",
+      "install_id": "cargo-wasi",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "cargo-wasi-0.1.28",
+      "pname": "cargo-wasi",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.1.28",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/lffgg1bf0vy8kh26760fa40wvwwhlpja-cargo-wasi-0.1.28"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/ycxpc1rvz96jymy52k6v9mwlyyn2cc8f-ccache-4.11.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "ccache-4.11",
+      "pname": "ccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/96svyvk0k78whf2h28l780fv383mrjn2-ccache-4.11-man",
+        "out": "/nix/store/gpc91asfybq91qjfpk3qlsqhjpqanlm2-ccache-4.11"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/n6abg5w5ic6wlx7j5kispcd1slgp8hz8-ccache-4.11.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "ccache-4.11",
+      "pname": "ccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/538rwq7vnr11mdbl9lcm8nr2jraqp062-ccache-4.11-man",
+        "out": "/nix/store/1fhw1q986hi06mrx1975sy8ksji0jhjv-ccache-4.11"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/a4i4zqzlkjs6jf89mxnd0rlmdijqhg61-ccache-4.11.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "ccache-4.11",
+      "pname": "ccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/gyvfd3jzmidawp5ichc4whia96xkga2h-ccache-4.11-man",
+        "out": "/nix/store/dxkwm82ixw6add870nxbdggvf9b97ybk-ccache-4.11"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "ccache",
+      "broken": false,
+      "derivation": "/nix/store/m7mj7cvr3i8w4krcd49qzkxl0l3v1a0m-ccache-4.11.drv",
+      "description": "Compiler cache for fast recompilation of C/C++ code",
+      "install_id": "ccache",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "ccache-4.11",
+      "pname": "ccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "4.11",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "man": "/nix/store/7v1240zpcl4x00psk2sk8lxy8p1lqd0c-ccache-4.11-man",
+        "out": "/nix/store/gczc45yhfpv1xgmw07nz10bpwdwdh1px-ccache-4.11"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.clang-unwrapped",
+      "broken": false,
+      "derivation": "/nix/store/4am1idmnlcvfi5a2vpi9ibfm3xxnx9n6-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "clang-unwrapped",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "clang-unwrapped",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/ghaa5c3vnms5pyzh35wg7s3jr1nx32jk-clang-19.1.7-dev",
+        "lib": "/nix/store/ncqw2m0s9mh8z3cwrcbdfb9cnvhfa93z-clang-19.1.7-lib",
+        "out": "/nix/store/1gkgsbv2zfxv421b193c6c668agzw451-clang-19.1.7",
+        "python": "/nix/store/wcnhf6c812r72b6hsq3igkhqhz6qi91h-clang-19.1.7-python"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.clang-unwrapped",
+      "broken": false,
+      "derivation": "/nix/store/q64p0qb0z4dwzqh8i01nfalv9hhlwwpw-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "clang-unwrapped",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "clang-unwrapped",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/g1iliss70ni69mvjqa1ngi4iw684avkh-clang-19.1.7-dev",
+        "lib": "/nix/store/lpkdxgi8x7md583wmw403b3k6yda9kdd-clang-19.1.7-lib",
+        "out": "/nix/store/m52j580jlcwb47xw634l7lbr9krf7gkn-clang-19.1.7",
+        "python": "/nix/store/7y13y6kwwy1vkfrnccpkf6hqz1042a9d-clang-19.1.7-python"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.clang-unwrapped",
+      "broken": false,
+      "derivation": "/nix/store/jkjcb73f801pwn9cy8vjmv60496gpzcx-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "clang-unwrapped",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "clang-unwrapped",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/d10kfmvqk94i5slwh1kjs8k7i23dmwak-clang-19.1.7-dev",
+        "lib": "/nix/store/sjrlv1wxjxrrqywp02zzw2vxdr2z9fzh-clang-19.1.7-lib",
+        "out": "/nix/store/cn7i93fmplvh05lkm73vcgcxb5078l8g-clang-19.1.7",
+        "python": "/nix/store/2al5pmiw7yvngwa4ma5pa72x7qiyq6z5-clang-19.1.7-python"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.clang-unwrapped",
+      "broken": false,
+      "derivation": "/nix/store/1srqpvhx0nb02gn8h1lxs5b0fjciglv4-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "clang-unwrapped",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "clang-unwrapped",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/mc9p435w5q6h9naxac5dql5k23n3xkhg-clang-19.1.7-dev",
+        "lib": "/nix/store/iaxqs038d8cv9ax1cai57swwyw31zh4s-clang-19.1.7-lib",
+        "out": "/nix/store/w2pxr9nv08hfhdl2dlbcqc6zl7yxxpm4-clang-19.1.7",
+        "python": "/nix/store/zw7xrdhf9rw9qg0l5mkvkj5sblgxx6j4-clang-19.1.7-python"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnutar",
+      "broken": false,
+      "derivation": "/nix/store/r5qkkhdnzlvvalh3g75js7jimf97nn3n-gnutar-1.35.drv",
+      "description": "GNU implementation of the `tar' archiver",
+      "install_id": "gnutar",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnutar-1.35",
+      "pname": "gnutar",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.35",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "info": "/nix/store/vqgz1lqpdkzad0852s5azzc3p0kwmqzq-gnutar-1.35-info",
+        "out": "/nix/store/3b25px1vzmz24wb8bajw3ad0zpxa7312-gnutar-1.35"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnutar",
+      "broken": false,
+      "derivation": "/nix/store/yrvxxjr63wyg79l30464sbcvjk05bdri-gnutar-1.35.drv",
+      "description": "GNU implementation of the `tar' archiver",
+      "install_id": "gnutar",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnutar-1.35",
+      "pname": "gnutar",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.35",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "info": "/nix/store/1f8mxifi1qc09qgz8mppazj6yfb4gwfm-gnutar-1.35-info",
+        "out": "/nix/store/mij6lcrwllah20vhd7yw3q1fpfpwgc0a-gnutar-1.35"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnutar",
+      "broken": false,
+      "derivation": "/nix/store/nbdvhnlkpf69i6dl12yqbl52lynjflic-gnutar-1.35.drv",
+      "description": "GNU implementation of the `tar' archiver",
+      "install_id": "gnutar",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnutar-1.35",
+      "pname": "gnutar",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.35",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "info": "/nix/store/8608amx9bn67am4sd93xffs09p5gq90k-gnutar-1.35-info",
+        "out": "/nix/store/91ldndblv9359l9ysa20402idv74ilhj-gnutar-1.35"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "gnutar",
+      "broken": false,
+      "derivation": "/nix/store/j47sv65vf5340121sj6q1vgj1yfrwbpi-gnutar-1.35.drv",
+      "description": "GNU implementation of the `tar' archiver",
+      "install_id": "gnutar",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnutar-1.35",
+      "pname": "gnutar",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.35",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "info": "/nix/store/z8d9vm3ajv22qwrbv3gxdbcxgrrkr9gx-gnutar-1.35-info",
+        "out": "/nix/store/j9gjzsbag34n3ic3yg4ra0p5yl8wcbhg-gnutar-1.35"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.libclang",
+      "broken": false,
+      "derivation": "/nix/store/4am1idmnlcvfi5a2vpi9ibfm3xxnx9n6-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "libclang",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "libclang",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/ghaa5c3vnms5pyzh35wg7s3jr1nx32jk-clang-19.1.7-dev",
+        "lib": "/nix/store/ncqw2m0s9mh8z3cwrcbdfb9cnvhfa93z-clang-19.1.7-lib",
+        "out": "/nix/store/1gkgsbv2zfxv421b193c6c668agzw451-clang-19.1.7",
+        "python": "/nix/store/wcnhf6c812r72b6hsq3igkhqhz6qi91h-clang-19.1.7-python"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.libclang",
+      "broken": false,
+      "derivation": "/nix/store/q64p0qb0z4dwzqh8i01nfalv9hhlwwpw-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "libclang",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "libclang",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/g1iliss70ni69mvjqa1ngi4iw684avkh-clang-19.1.7-dev",
+        "lib": "/nix/store/lpkdxgi8x7md583wmw403b3k6yda9kdd-clang-19.1.7-lib",
+        "out": "/nix/store/m52j580jlcwb47xw634l7lbr9krf7gkn-clang-19.1.7",
+        "python": "/nix/store/7y13y6kwwy1vkfrnccpkf6hqz1042a9d-clang-19.1.7-python"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.libclang",
+      "broken": false,
+      "derivation": "/nix/store/jkjcb73f801pwn9cy8vjmv60496gpzcx-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "libclang",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "libclang",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/d10kfmvqk94i5slwh1kjs8k7i23dmwak-clang-19.1.7-dev",
+        "lib": "/nix/store/sjrlv1wxjxrrqywp02zzw2vxdr2z9fzh-clang-19.1.7-lib",
+        "out": "/nix/store/cn7i93fmplvh05lkm73vcgcxb5078l8g-clang-19.1.7",
+        "python": "/nix/store/2al5pmiw7yvngwa4ma5pa72x7qiyq6z5-clang-19.1.7-python"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvmPackages.libclang",
+      "broken": false,
+      "derivation": "/nix/store/1srqpvhx0nb02gn8h1lxs5b0fjciglv4-clang-19.1.7.drv",
+      "description": "C language family frontend for LLVM",
+      "install_id": "libclang",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "clang-19.1.7",
+      "pname": "libclang",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/mc9p435w5q6h9naxac5dql5k23n3xkhg-clang-19.1.7-dev",
+        "lib": "/nix/store/iaxqs038d8cv9ax1cai57swwyw31zh4s-clang-19.1.7-lib",
+        "out": "/nix/store/w2pxr9nv08hfhdl2dlbcqc6zl7yxxpm4-clang-19.1.7",
+        "python": "/nix/store/zw7xrdhf9rw9qg0l5mkvkj5sblgxx6j4-clang-19.1.7-python"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "lld",
+      "broken": false,
+      "derivation": "/nix/store/w9r2bnvqj6jd34rl93gfavks023pf13r-lld-19.1.7.drv",
+      "description": "LLVM linker (unwrapped)",
+      "install_id": "lld",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "lld-19.1.7",
+      "pname": "lld",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/yzklbf72zxx8qhpspp8iff2h8gzzipx3-lld-19.1.7-dev",
+        "lib": "/nix/store/7lj88wxh7n6shcdiwhahwj0b4qcixza7-lld-19.1.7-lib",
+        "out": "/nix/store/vlhbbg4n7hdhp1yg6bipgfjgwqj1w4fr-lld-19.1.7"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "lld",
+      "broken": false,
+      "derivation": "/nix/store/9ncdp4yj8kh9lp7kij2i0311lrq29p25-lld-19.1.7.drv",
+      "description": "LLVM linker (unwrapped)",
+      "install_id": "lld",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "lld-19.1.7",
+      "pname": "lld",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/dn08lx99lcv3jhlfjx49vrcbzf6cc6b1-lld-19.1.7-dev",
+        "lib": "/nix/store/6ssh8q2rws50lbwy16z253awcniscfb4-lld-19.1.7-lib",
+        "out": "/nix/store/xg15p64hxi54a1jinxzjg12pwm3dk3jx-lld-19.1.7"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "lld",
+      "broken": false,
+      "derivation": "/nix/store/sg0yb7sz4kw60nc3z8q06lb19gphiiph-lld-19.1.7.drv",
+      "description": "LLVM linker (unwrapped)",
+      "install_id": "lld",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "lld-19.1.7",
+      "pname": "lld",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/30pi2yc0h1d8g4dyxciici5hjali806y-lld-19.1.7-dev",
+        "lib": "/nix/store/snlm2xk8qpgqlfpjv3bjr109l8hkaaf6-lld-19.1.7-lib",
+        "out": "/nix/store/vglwsaqbdbh64n6lnpq33knjxs0mxcvb-lld-19.1.7"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "lld",
+      "broken": false,
+      "derivation": "/nix/store/863yv8l0ln709l0wwm74ns8jhqawakc0-lld-19.1.7.drv",
+      "description": "LLVM linker (unwrapped)",
+      "install_id": "lld",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "lld-19.1.7",
+      "pname": "lld",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/f7sllrww3av0xag1bshhnq9qhj4cxk0b-lld-19.1.7-dev",
+        "lib": "/nix/store/ykz65f1rc1js8dzx4gbn7nnkjr6s1vz5-lld-19.1.7-lib",
+        "out": "/nix/store/4rch8x4wglvi7l5j5zb9i9ac94510638-lld-19.1.7"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvm",
+      "broken": false,
+      "derivation": "/nix/store/bsw0sb48lyps5rl16y7w62sz96s76d8j-llvm-19.1.7.drv",
+      "description": "Collection of modular and reusable compiler and toolchain technologies",
+      "install_id": "llvm",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "llvm-19.1.7",
+      "pname": "llvm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/rmkwndf9spqpk9yx9jzkax3rbjr395rp-llvm-19.1.7-dev",
+        "lib": "/nix/store/khsydjwxih1pdcl8d7bny2gzfnr37nzv-llvm-19.1.7-lib",
+        "out": "/nix/store/r416lkk2r1j39i8px27zyyp0pz033car-llvm-19.1.7",
+        "python": "/nix/store/rwlqg97mrq08d1d5zk0z04rmgzinji0j-llvm-19.1.7-python"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvm",
+      "broken": false,
+      "derivation": "/nix/store/dz3rwxr6ydjmfqy27rbcbfmjiqfmfndg-llvm-19.1.7.drv",
+      "description": "Collection of modular and reusable compiler and toolchain technologies",
+      "install_id": "llvm",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "llvm-19.1.7",
+      "pname": "llvm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/2n4ky6wfxrbvqx4ffs87wqfqvk5q2dp4-llvm-19.1.7-dev",
+        "lib": "/nix/store/7pnv04r1gi41j7hn656z9jl60vl27rvr-llvm-19.1.7-lib",
+        "out": "/nix/store/z5f3h6ifsa8s1mqhszfwjvc21xcbd9jh-llvm-19.1.7",
+        "python": "/nix/store/mig1vc2w9rgj3cscfwmmkxiygd9kx8af-llvm-19.1.7-python"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvm",
+      "broken": false,
+      "derivation": "/nix/store/sca9h8h04rj55cqj3fgcdsriw6bf7a9h-llvm-19.1.7.drv",
+      "description": "Collection of modular and reusable compiler and toolchain technologies",
+      "install_id": "llvm",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "llvm-19.1.7",
+      "pname": "llvm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/v7dz9lvs6bdgl5w6qmfrx2811vvxmphk-llvm-19.1.7-dev",
+        "lib": "/nix/store/ys1vm2fcl1qkchv761j4hyqgmkcgvy49-llvm-19.1.7-lib",
+        "out": "/nix/store/pxzycm43fqka6fn1cf6rh43825inhzay-llvm-19.1.7",
+        "python": "/nix/store/ggdc9risdcjhfwybwh6rz34427l931fr-llvm-19.1.7-python"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "llvm",
+      "broken": false,
+      "derivation": "/nix/store/8arppbra88pw5h20344rfg5gsr5s4sj4-llvm-19.1.7.drv",
+      "description": "Collection of modular and reusable compiler and toolchain technologies",
+      "install_id": "llvm",
+      "license": "[ NCSA, Apache-2.0 WITH LLVM-exception ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "llvm-19.1.7",
+      "pname": "llvm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "19.1.7",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "dev": "/nix/store/j4bh2nw0b0r0aif6zamj6jkc5cd9zqxp-llvm-19.1.7-dev",
+        "lib": "/nix/store/xny3cilib23bq1hc4pag8qqhd2hn4l65-llvm-19.1.7-lib",
+        "out": "/nix/store/hrf8vc6nlgqk3zc8rr4q9iibd6v9dkp0-llvm-19.1.7",
+        "python": "/nix/store/a237k8jy01b88dwrhlz9ihp9r0vz4pxb-llvm-19.1.7-python"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "m4",
+      "broken": false,
+      "derivation": "/nix/store/82if0mykjpz39xsbch1960k7aipw8ych-gnum4-1.4.19.drv",
+      "description": "GNU M4, a macro processor",
+      "install_id": "m4",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnum4-1.4.19",
+      "pname": "m4",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gnum4-1.4.19",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/a99xm4ml8k638vgrk1gr53w0lz72x71b-gnum4-1.4.19"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "m4",
+      "broken": false,
+      "derivation": "/nix/store/0ypvridiixxaajww6ywki28wfvrs2dcw-gnum4-1.4.19.drv",
+      "description": "GNU M4, a macro processor",
+      "install_id": "m4",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnum4-1.4.19",
+      "pname": "m4",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gnum4-1.4.19",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/syf2s1p6is1p962ih0nhc7j2xsfkvqam-gnum4-1.4.19"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "m4",
+      "broken": false,
+      "derivation": "/nix/store/hib4fj65ndr91km7q7b32ssa0vpjn517-gnum4-1.4.19.drv",
+      "description": "GNU M4, a macro processor",
+      "install_id": "m4",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnum4-1.4.19",
+      "pname": "m4",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gnum4-1.4.19",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/83s7aac1y6dxiss61a5ambrvx6njg0vf-gnum4-1.4.19"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "m4",
+      "broken": false,
+      "derivation": "/nix/store/0kpcamakvjgpr68vf8b8qvr4ayalbqm1-gnum4-1.4.19.drv",
+      "description": "GNU M4, a macro processor",
+      "install_id": "m4",
+      "license": "GPL-3.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "gnum4-1.4.19",
+      "pname": "m4",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "gnum4-1.4.19",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/lpvcjasqz3baqbdm60zpk9rx30bng2g1-gnum4-1.4.19"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "mercurial",
+      "broken": false,
+      "derivation": "/nix/store/jljc6gglh5bcwkjzwd0x0r6i8kxg5knb-mercurial-6.9.1.drv",
+      "description": "Fast, lightweight SCM system for very large distributed projects",
+      "install_id": "mercurial",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "mercurial-6.9.1",
+      "pname": "mercurial",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "6.9.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/vdn2jz06gs1g2738zjxk628phckdrmjd-mercurial-6.9.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "mercurial",
+      "broken": false,
+      "derivation": "/nix/store/rhpjdrk3j3kbww9sbbkisxbl0cavlzfa-mercurial-6.9.1.drv",
+      "description": "Fast, lightweight SCM system for very large distributed projects",
+      "install_id": "mercurial",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "mercurial-6.9.1",
+      "pname": "mercurial",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "6.9.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/wbcbx5viyy82kphhl5sh57hg27i4prbf-mercurial-6.9.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "mercurial",
+      "broken": false,
+      "derivation": "/nix/store/g3mbn9z46qg57dqm21vd7qicfga9a8ls-mercurial-6.9.1.drv",
+      "description": "Fast, lightweight SCM system for very large distributed projects",
+      "install_id": "mercurial",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "mercurial-6.9.1",
+      "pname": "mercurial",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "6.9.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/yrw60scaql9c4yhf1dwahidy5v26s65n-mercurial-6.9.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "mercurial",
+      "broken": false,
+      "derivation": "/nix/store/8fdbi36ycknpxcfxjhvxpinvjsk1rwaq-mercurial-6.9.1.drv",
+      "description": "Fast, lightweight SCM system for very large distributed projects",
+      "install_id": "mercurial",
+      "license": "GPL-2.0-or-later",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "mercurial-6.9.1",
+      "pname": "mercurial",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "6.9.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/z3xlw7jmx0jhvj8q8r44vzl8pyysffh0-mercurial-6.9.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs_20",
+      "broken": false,
+      "derivation": "/nix/store/n2dbv7cjk43nm7hqnga2za0wwb2sqx0i-nodejs-20.18.3.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs_20",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "nodejs-20.18.3",
+      "pname": "nodejs_20",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "20.18.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/6zb8ma14q3s0w7gq2bgz0sfyaa7lm323-nodejs-20.18.3-libv8",
+        "out": "/nix/store/lwizv982l8v1xi0i9qg38cvqgmmq9l7w-nodejs-20.18.3"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs_20",
+      "broken": false,
+      "derivation": "/nix/store/cv2r3zsjc95785m91hn841fy3hzd1df6-nodejs-20.18.3.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs_20",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "nodejs-20.18.3",
+      "pname": "nodejs_20",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "20.18.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/55ca4bz6hdns6dp42fsw0xdzy38717z1-nodejs-20.18.3-libv8",
+        "out": "/nix/store/vxcnpdyx7lqf3ccfgmnnvw2887v5smzn-nodejs-20.18.3"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs_20",
+      "broken": false,
+      "derivation": "/nix/store/i6ahhwmwz90rf80vcimxdkz7n82fp9z4-nodejs-20.18.3.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs_20",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "nodejs-20.18.3",
+      "pname": "nodejs_20",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "20.18.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/jn2z0dywrvp69dadfzbxakp41s3asq1w-nodejs-20.18.3-libv8",
+        "out": "/nix/store/gq01xlgcqpnl61z2prx7ndh2qvcp628v-nodejs-20.18.3"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "nodejs_20",
+      "broken": false,
+      "derivation": "/nix/store/irlh1mwxg641rsjp4j99vp868rs89jsz-nodejs-20.18.3.drv",
+      "description": "Event-driven I/O framework for the V8 JavaScript engine",
+      "install_id": "nodejs_20",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "nodejs-20.18.3",
+      "pname": "nodejs_20",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "20.18.3",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "libv8": "/nix/store/8kx6sh17pk01hklv5k44lgp21r2zwk04-nodejs-20.18.3-libv8",
+        "out": "/nix/store/sw8mgfgy28h0jrbf8icbvr6w8wfr77np-nodejs-20.18.3"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconf",
+      "broken": false,
+      "derivation": "/nix/store/sm7jkp8g3h4qizpyz1mdn16qc4yavd8l-pkgconf-wrapper-2.3.0.drv",
+      "description": "Package compiler and linker metadata toolkit (wrapper script)",
+      "install_id": "pkgconf",
+      "license": "ISC",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pkgconf-wrapper-2.3.0",
+      "pname": "pkgconf",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.3.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/pj77ycv1cd7bwxm43jc0125wvmpg9mrq-pkgconf-wrapper-2.3.0-doc",
+        "man": "/nix/store/qgsidl17wnxrqjr0lk4igd36yl6bsarp-pkgconf-wrapper-2.3.0-man",
+        "out": "/nix/store/9nnj9vdp7x6s4fcaspcsaff04yvp2386-pkgconf-wrapper-2.3.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconf",
+      "broken": false,
+      "derivation": "/nix/store/gwwml4hvc12blmd6hcmkzkv79si1krdx-pkgconf-wrapper-2.3.0.drv",
+      "description": "Package compiler and linker metadata toolkit (wrapper script)",
+      "install_id": "pkgconf",
+      "license": "ISC",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pkgconf-wrapper-2.3.0",
+      "pname": "pkgconf",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.3.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/dhl2fm5ayd9hdrcp3myarfs2ynfjhil9-pkgconf-wrapper-2.3.0-doc",
+        "man": "/nix/store/z01n3wfda6cf8874x54cc82146hk0z2b-pkgconf-wrapper-2.3.0-man",
+        "out": "/nix/store/nc1j946r2y2d966afikvizh4zx0zrbg8-pkgconf-wrapper-2.3.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconf",
+      "broken": false,
+      "derivation": "/nix/store/l37mgx7p0vrnag57fndwk8jamxhizd5l-pkgconf-wrapper-2.3.0.drv",
+      "description": "Package compiler and linker metadata toolkit (wrapper script)",
+      "install_id": "pkgconf",
+      "license": "ISC",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pkgconf-wrapper-2.3.0",
+      "pname": "pkgconf",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.3.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/w8zxxnql1did8z90fy19b62xaapaaaj0-pkgconf-wrapper-2.3.0-doc",
+        "man": "/nix/store/822l6lkkswqqya2fddp5qhim2wvfnd68-pkgconf-wrapper-2.3.0-man",
+        "out": "/nix/store/aa9srrndpsxcasbsynihbycwrvh3j30s-pkgconf-wrapper-2.3.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pkgconf",
+      "broken": false,
+      "derivation": "/nix/store/29j6096hzj49g9jmsl21nrs4fgfwp91r-pkgconf-wrapper-2.3.0.drv",
+      "description": "Package compiler and linker metadata toolkit (wrapper script)",
+      "install_id": "pkgconf",
+      "license": "ISC",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pkgconf-wrapper-2.3.0",
+      "pname": "pkgconf",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "2.3.0",
+      "outputs_to_install": [
+        "man",
+        "out"
+      ],
+      "outputs": {
+        "doc": "/nix/store/82xnamalcx4ij608zqrr8y841qa5akra-pkgconf-wrapper-2.3.0-doc",
+        "man": "/nix/store/wwcd8cjc32ydymgabi5vjnkflbag7z3m-pkgconf-wrapper-2.3.0-man",
+        "out": "/nix/store/g2yb0pc7zd8fdbyq1d0yb1hrafpcg2kj-pkgconf-wrapper-2.3.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pnpm",
+      "broken": false,
+      "derivation": "/nix/store/f7py78g5v9qxj10kfnzv1gsylvw9m0ly-pnpm-10.6.2.drv",
+      "description": "Fast, disk space efficient package manager for JavaScript",
+      "install_id": "pnpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pnpm-10.6.2",
+      "pname": "pnpm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "10.6.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/0zvnl2q475cakvl3bdgjl3py60ngys05-pnpm-10.6.2"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pnpm",
+      "broken": false,
+      "derivation": "/nix/store/jijxf7m2b1dhaxzavi49j3g9zi5jcyah-pnpm-10.6.2.drv",
+      "description": "Fast, disk space efficient package manager for JavaScript",
+      "install_id": "pnpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pnpm-10.6.2",
+      "pname": "pnpm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "10.6.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/fvirhzl2ygjsnxfw0pdhg1jgybcyn95f-pnpm-10.6.2"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pnpm",
+      "broken": false,
+      "derivation": "/nix/store/8jbnxdpf2fsr5jdnmcswra740gs35gc7-pnpm-10.6.2.drv",
+      "description": "Fast, disk space efficient package manager for JavaScript",
+      "install_id": "pnpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pnpm-10.6.2",
+      "pname": "pnpm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "10.6.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/717jiydkk5314xk49kwk9pv6436fknc3-pnpm-10.6.2"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "pnpm",
+      "broken": false,
+      "derivation": "/nix/store/d9c53xm839cb921yy8bkz81s1j73aqkf-pnpm-10.6.2.drv",
+      "description": "Fast, disk space efficient package manager for JavaScript",
+      "install_id": "pnpm",
+      "license": "MIT",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "pnpm-10.6.2",
+      "pname": "pnpm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "10.6.2",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cik4v9s4dpjnzjljnr9n4krsimlisvi4-pnpm-10.6.2"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-bindgen",
+      "broken": false,
+      "derivation": "/nix/store/8548iwkp0xd54d6gbb09na7d5nnc80id-rust-bindgen-0.71.1.drv",
+      "description": "Automatically generates Rust FFI bindings to C (and some C++) libraries",
+      "install_id": "rust-bindgen",
+      "license": "[ BSD-3-Clause ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-bindgen-0.71.1",
+      "pname": "rust-bindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.71.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/dvhcffa213dnd92l4a96lnaks597w2xm-rust-bindgen-0.71.1"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-bindgen",
+      "broken": false,
+      "derivation": "/nix/store/kcng0248pvdf2l4spni033m17k2v15if-rust-bindgen-0.71.1.drv",
+      "description": "Automatically generates Rust FFI bindings to C (and some C++) libraries",
+      "install_id": "rust-bindgen",
+      "license": "[ BSD-3-Clause ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-bindgen-0.71.1",
+      "pname": "rust-bindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.71.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/f3n0g6abwdyy8p6cjs2l4mid7vzqi60n-rust-bindgen-0.71.1"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-bindgen",
+      "broken": false,
+      "derivation": "/nix/store/m8ykz8l3f9f745cjyrgvmbnnikw5sj5j-rust-bindgen-0.71.1.drv",
+      "description": "Automatically generates Rust FFI bindings to C (and some C++) libraries",
+      "install_id": "rust-bindgen",
+      "license": "[ BSD-3-Clause ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-bindgen-0.71.1",
+      "pname": "rust-bindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.71.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/rd5h2hgkrdn91fl809cvcaqqhg6dhbvn-rust-bindgen-0.71.1"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-bindgen",
+      "broken": false,
+      "derivation": "/nix/store/6z2cyrx7dlcdsnjgxwrj7hw21ywa688f-rust-bindgen-0.71.1.drv",
+      "description": "Automatically generates Rust FFI bindings to C (and some C++) libraries",
+      "install_id": "rust-bindgen",
+      "license": "[ BSD-3-Clause ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-bindgen-0.71.1",
+      "pname": "rust-bindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.71.1",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/m1gllfh6k2wd3p1ajz2gv29n05r9vr7l-rust-bindgen-0.71.1"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-cbindgen",
+      "broken": false,
+      "derivation": "/nix/store/213mbgwfk0hhw1wwdr3bmkrgycqrza6n-rust-cbindgen-0.28.0.drv",
+      "description": "Project for generating C bindings from Rust code",
+      "install_id": "rust-cbindgen",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-cbindgen-0.28.0",
+      "pname": "rust-cbindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.28.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/barr9yw2sxk47hmpblylghgvrbgy0aan-rust-cbindgen-0.28.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-cbindgen",
+      "broken": false,
+      "derivation": "/nix/store/sq8kpy0dpc3zzkh3p0i56487qrs4gkgc-rust-cbindgen-0.28.0.drv",
+      "description": "Project for generating C bindings from Rust code",
+      "install_id": "rust-cbindgen",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-cbindgen-0.28.0",
+      "pname": "rust-cbindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.28.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/n6jcvda14v0v93lfgi3msps4yw0wl5ig-rust-cbindgen-0.28.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-cbindgen",
+      "broken": false,
+      "derivation": "/nix/store/rqy0y99qdbh3g2gvjsbywcxsh78r1lwa-rust-cbindgen-0.28.0.drv",
+      "description": "Project for generating C bindings from Rust code",
+      "install_id": "rust-cbindgen",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-cbindgen-0.28.0",
+      "pname": "rust-cbindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.28.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/vxb9fl8hkw8aq6zl7kcclasjzgfc382j-rust-cbindgen-0.28.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rust-cbindgen",
+      "broken": false,
+      "derivation": "/nix/store/kkzvw6m0d2rzdk2n2pajr0dfh3b21983-rust-cbindgen-0.28.0.drv",
+      "description": "Project for generating C bindings from Rust code",
+      "install_id": "rust-cbindgen",
+      "license": "MPL-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rust-cbindgen-0.28.0",
+      "pname": "rust-cbindgen",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.28.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/gfw9mhhs23y7yf5x127l91rs17hg4gsx-rust-cbindgen-0.28.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rustfmt",
+      "broken": false,
+      "derivation": "/nix/store/c4ljl8a698bvv3ni1nwnncwkr4fjr1n7-rustfmt-1.85.0.drv",
+      "description": "Tool for formatting Rust code according to style guidelines",
+      "install_id": "rustfmt",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rustfmt-1.85.0",
+      "pname": "rustfmt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/2bhm4y1achw1wi3mffffrw3zs6dvjmbz-rustfmt-1.85.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rustfmt",
+      "broken": false,
+      "derivation": "/nix/store/5r3hnp149ppp13dh3aw1qyhdpvlla8cg-rustfmt-1.85.0.drv",
+      "description": "Tool for formatting Rust code according to style guidelines",
+      "install_id": "rustfmt",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rustfmt-1.85.0",
+      "pname": "rustfmt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/hk0rzxh6zxh3a44lpm0sxqw9zljgdgdh-rustfmt-1.85.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rustfmt",
+      "broken": false,
+      "derivation": "/nix/store/f39q0p3j37hckkja284qq3j9m8brdq0f-rustfmt-1.85.0.drv",
+      "description": "Tool for formatting Rust code according to style guidelines",
+      "install_id": "rustfmt",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rustfmt-1.85.0",
+      "pname": "rustfmt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/5jmwbj7ychwaf2viyp1aq48v5r638717-rustfmt-1.85.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "rustfmt",
+      "broken": false,
+      "derivation": "/nix/store/f5a6dsxswwmpky8cwb1z02gp4hzia7bl-rustfmt-1.85.0.drv",
+      "description": "Tool for formatting Rust code according to style guidelines",
+      "install_id": "rustfmt",
+      "license": "[ MIT, Apache-2.0 ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "rustfmt-1.85.0",
+      "pname": "rustfmt",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.85.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/jbr0dr5cycd44zzm7anfs33qrqz06k5i-rustfmt-1.85.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/098p6yhgg0mqbii6gkpvkaxq3hvlaim4-sccache-0.10.0.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "sccache-0.10.0",
+      "pname": "sccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/qsfavqfpggy5wb0drbys3720gw94n5df-sccache-0.10.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/h7pjfh9lfkc106vx2akxf1alg334xn71-sccache-0.10.0.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "sccache-0.10.0",
+      "pname": "sccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/285ab8la30fmpzpy63sm2sz1519h6wsg-sccache-0.10.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/4n21cqqkxhy0fhfx3c38zv2wyk5wgfmc-sccache-0.10.0.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "sccache-0.10.0",
+      "pname": "sccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/8j6yliblgbhhfk1mqqjbyypq5nl90czr-sccache-0.10.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "sccache",
+      "broken": false,
+      "derivation": "/nix/store/l2gh1w09fz80bygxjmvhxanbrxczd241-sccache-0.10.0.drv",
+      "description": "Ccache with Cloud Storage",
+      "install_id": "sccache",
+      "license": "Apache-2.0",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "sccache-0.10.0",
+      "pname": "sccache",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "0.10.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/cdirc57ifwi19zjbmsj5dshzd7m8r8ma-sccache-0.10.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/lv20y4mlc1arc5g9fm1xd96c7swqxyad-xz-5.6.4.drv",
+      "description": "General-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "xz-5.6.4",
+      "pname": "xz",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.6.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/hx1bpdkka265s1wzw3abvn8wy7x922sw-xz-5.6.4-bin",
+        "dev": "/nix/store/148yzmvyi2i9n182p7d20x14x1lmry03-xz-5.6.4-dev",
+        "doc": "/nix/store/0qdx98cs0fhwynh8j6x76j2ca0jc3fa5-xz-5.6.4-doc",
+        "man": "/nix/store/d5iz38mjw3rgfp4fri4bm9z5q27m6qfq-xz-5.6.4-man",
+        "out": "/nix/store/5lmmpz34b432kp6qssk11cmnxch93syj-xz-5.6.4"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/r5yx652b5j3pqr7b7iwv7i62j0nid859-xz-5.6.4.drv",
+      "description": "General-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "xz-5.6.4",
+      "pname": "xz",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.6.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/yfcm7i4dygc83gxxixbjlaf4zl8cn2b5-xz-5.6.4-bin",
+        "dev": "/nix/store/wbc0j7a1hx208ddcm1glfs8q1677wpvy-xz-5.6.4-dev",
+        "doc": "/nix/store/qqqpd9xxrk8qd1gx21ysflqj9g5cymsv-xz-5.6.4-doc",
+        "man": "/nix/store/0gscjyx9f3qcxcn15846llgrfm9bcv3c-xz-5.6.4-man",
+        "out": "/nix/store/9zwlifncvm3fjqs6jh7mmg11mk6w3921-xz-5.6.4"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/pdscv9yjixjzb95yq7dq7mzqpbadhsf9-xz-5.6.4.drv",
+      "description": "General-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "xz-5.6.4",
+      "pname": "xz",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.6.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/lbmjz6q1p7xz5sz38p7qq4603ba0ffjw-xz-5.6.4-bin",
+        "dev": "/nix/store/isykgqysjpg2qiny4332yjs7r66vqqlw-xz-5.6.4-dev",
+        "doc": "/nix/store/4n4k91aqjj6ghs8a14bpxm72b7sc095p-xz-5.6.4-doc",
+        "man": "/nix/store/lshbyvdghzz3f5dq770acpgvwa8hxi6c-xz-5.6.4-man",
+        "out": "/nix/store/r9bja6xfs7mc37dgyb439g1gvmcj8mq2-xz-5.6.4"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "xz",
+      "broken": false,
+      "derivation": "/nix/store/sqwqnilfwkw6p2f5gaj6n1xlsy054fnw-xz-5.6.4.drv",
+      "description": "General-purpose data compression software, successor of LZMA",
+      "install_id": "xz",
+      "license": "[ GPL-2.0-or-later, LGPL-2.1-or-later ]",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "xz-5.6.4",
+      "pname": "xz",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "5.6.4",
+      "outputs_to_install": [
+        "bin",
+        "man"
+      ],
+      "outputs": {
+        "bin": "/nix/store/7w6d3dwm5zs6vn37wmsbi0szvx0w98gy-xz-5.6.4-bin",
+        "dev": "/nix/store/cizd0f0sifvg0bsbc84q7ga6fsg0ba8l-xz-5.6.4-dev",
+        "doc": "/nix/store/q4a68cgnpscrvgw1gb357pvbdlhfw98c-xz-5.6.4-doc",
+        "man": "/nix/store/r0klb5rlbw2989lkvxbs49cnh24cznf1-xz-5.6.4-man",
+        "out": "/nix/store/5f9d9sh15sk3xw80cbx8m5aiiqn0g3nw-xz-5.6.4"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "yasm",
+      "broken": false,
+      "derivation": "/nix/store/lci32jchzjss327nhfab0b3lap7c3s3x-yasm-1.3.0.drv",
+      "description": "Complete rewrite of the NASM assembler",
+      "install_id": "yasm",
+      "license": "BSD-2-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "yasm-1.3.0",
+      "pname": "yasm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/2gf2f6v2ngvs3xdymcvfdd8nkah21p14-yasm-1.3.0"
+      },
+      "system": "aarch64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "yasm",
+      "broken": false,
+      "derivation": "/nix/store/rbfysz11f347xyhnc1gni25jr9pr43n0-yasm-1.3.0.drv",
+      "description": "Complete rewrite of the NASM assembler",
+      "install_id": "yasm",
+      "license": "BSD-2-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "yasm-1.3.0",
+      "pname": "yasm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/y3h0d4kibj1763ygq1sl8adm8wg878ki-yasm-1.3.0"
+      },
+      "system": "aarch64-linux",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "yasm",
+      "broken": false,
+      "derivation": "/nix/store/ya911mwf6r8dsrsvmpyjgxw7g4rhiv9w-yasm-1.3.0.drv",
+      "description": "Complete rewrite of the NASM assembler",
+      "install_id": "yasm",
+      "license": "BSD-2-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "yasm-1.3.0",
+      "pname": "yasm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/q5mqzi8x6qsg532wns5rda66hyhpx8s8-yasm-1.3.0"
+      },
+      "system": "x86_64-darwin",
+      "group": "toplevel",
+      "priority": 5
+    },
+    {
+      "attr_path": "yasm",
+      "broken": false,
+      "derivation": "/nix/store/vppdd45nv29jqh0z55wf0ad0imgarqsw-yasm-1.3.0.drv",
+      "description": "Complete rewrite of the NASM assembler",
+      "install_id": "yasm",
+      "license": "BSD-2-Clause",
+      "locked_url": "https://github.com/flox/nixpkgs?rev=6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "name": "yasm-1.3.0",
+      "pname": "yasm",
+      "rev": "6607cf789e541e7873d40d3a8f7815ea92204f32",
+      "rev_count": 767267,
+      "rev_date": "2025-03-13T07:39:42Z",
+      "scrape_date": "2025-03-14T00:31:05Z",
+      "stabilities": [
+        "staging",
+        "unstable"
+      ],
+      "unfree": false,
+      "version": "1.3.0",
+      "outputs_to_install": [
+        "out"
+      ],
+      "outputs": {
+        "out": "/nix/store/7jaiaz47bpq4ng0x3gnwmwcrpg89cz9k-yasm-1.3.0"
+      },
+      "system": "x86_64-linux",
+      "group": "toplevel",
+      "priority": 5
+    }
+  ]
+}

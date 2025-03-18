@@ -1,0 +1,32 @@
+name: flox environment management
+description: Install flox and load git worktree environment
+inputs:
+  respawning:
+    description: Whether the environment is respawning
+    default: false
+outputs:
+  flox-bin:
+    description: The flox binary path
+    value: ${{ steps.flox-activate.flox-bin-path }}
+runs:
+  using: composite
+  steps:
+
+    - name: Install flox
+      id: install
+      uses: flox/install-flox-action@v2
+      if: ${{ inputs.respawning == 'false' }}
+
+    - name: Activate flox
+      id: activate
+      shell: bash
+      run: |-
+        flox config --set-bool disable_metrics true
+        flox activate -- direnv dump | 
+          $( flox activate -- command -v direnv ) apply_dump /dev/stdin |
+          tr ';' '\n' |
+          sed -e 's/^export //' -e "s/\$'\(.*\)'$/\1/" |
+          tee -a $GITHUB_ENV
+        cat <<EOF | tee -a $GITHUB_OUTPUT
+        flox-bin-path=$( command -v flox )
+        EOF
